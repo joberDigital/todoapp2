@@ -6,7 +6,36 @@
   <title>Generador de Páginas Dinámicas</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
+
+
+
+
 <body>
+  <h2>Crear nueva página</h2>
+  <input id="titulo" type="text" placeholder="Título">
+  <input id="mensaje" type="text" placeholder="Mensaje">
+  <input id="colorFondo" type="color" value="#ffffff">
+  <button id="btnCrearPagina">Crear página</button>
+  <p id="resultado"></p>
+
+  <hr>
+
+  <h2>Páginas creadas</h2>
+  <button id="btnListarPaginas">Actualizar lista</button>
+  <button id="btnExportar">💾 Exportar</button>
+  <button id="btnImportar">📂 Importar</button>
+  <ul id="listaPaginas"></ul>
+
+  <hr>
+  <div id="vistaPagina"></div>
+
+  <script src="script.js"></script>
+</body>
+
+
+  
+<!-- <body>
   <main>
     <h1>📄 Generador de Páginas Dinámicas (versión GitHub Pages)</h1>
 
@@ -29,5 +58,5 @@
   </main>
 
   <script src="script.js"></script>
-</body>
+</body> -->
 </html>
