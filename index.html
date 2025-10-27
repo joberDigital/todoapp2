@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de Páginas Dinámicas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>📄 Generador de Páginas Dinámicas (versión GitHub Pages)</h1>
+
+    <section class="crear">
+      <h2>Crear nueva página</h2>
+      <input id="titulo" type="text" placeholder="Título de la página" />
+      <input id="mensaje" type="text" placeholder="Mensaje del contenido" />
+      <input id="colorFondo" type="color" value="#ffffff" />
+      <button id="btnCrearPagina">Crear página</button>
+      <p id="resultado"></p>
+    </section>
+
+    <hr>
+
+    <section class="listar">
+      <h2>Lista de páginas creadas</h2>
+      <button id="btnListarPaginas">Actualizar lista</button>
+      <ul id="listaPaginas"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
