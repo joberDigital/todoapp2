@@ -1,0 +1,57 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 2em;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input, button {
+  margin: 0.5em 0;
+  padding: 0.6em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  background: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
