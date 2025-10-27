@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página dinámica</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #fafafa;
+      transition: background 0.3s;
+    }
+    main {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      padding: 1.5em;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 { color: #333; }
+    p { font-size: 1.1em; }
+    a {
+      display: inline-block;
+      margin-top: 1em;
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main id="contenido"></main>
+
+  <script>
+    function cargarPagina() {
+      const params = new URLSearchParams(window.location.search);
+      const nombre = params.get("nombre");
+      const paginas = JSON.parse(localStorage.getItem("paginas") || "[]");
+      const pagina = paginas.find(p => p.nombre === nombre);
+
+      if (!pagina) {
+        document.getElementById("contenido").innerHTML = "<h2>❌ Página no encontrada</h2>";
+        return;
+      }
+
+      document.title = pagina.titulo;
+      document.body.style.backgroundColor = pagina.colorFondo;
+      document.getElementById("contenido").innerHTML = `
+        <h1>${pagina.titulo}</h1>
+        <p>${pagina.mensaje}</p>
+        <a href="index.html">⬅️ Volver al inicio</a>
+      `;
+    }
+    cargarPagina();
+  </script>
+</body>
+</html>
